@@ -8,7 +8,6 @@
   "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.1.0",
   "use_pytest": "y",
-  "use_pypi_deployment_with_travis": "n",
   "add_pyup_badge": "y",
   "command_line_interface": "Typer",
   "create_author_file": "y",
