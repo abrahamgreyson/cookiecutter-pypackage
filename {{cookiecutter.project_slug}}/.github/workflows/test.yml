@@ -17,10 +17,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python {% raw %}${{ matrix.python-version }}{% endraw %}
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
         cache: 'pip'
 
     - name: Create and activate virtual environment
@@ -47,7 +47,7 @@ jobs:
       with:
         files: ./coverage.xml
         fail_ci_if_error: true
-        token: ${{ secrets.CODECOV_TOKEN }}
+        token: {% raw %}${{ secrets.CODECOV_TOKEN }}{% endraw %}
 
     - name: Upload test results
       uses: actions/upload-artifact@v3
