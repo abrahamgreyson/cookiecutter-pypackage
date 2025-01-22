@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import pathlib
+import subprocess
 
 
 if __name__ == '__main__':
@@ -13,3 +14,7 @@ if __name__ == '__main__':
         
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
         pathlib.Path('LICENSE').unlink()
+
+    subprocess.run(['git', 'init'])
+subprocess.run(['git', 'add', '.'])
+subprocess.run(['git', 'commit', '-m', 'Initial commit'])
